@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:orderingFromXml="true" android:key="prefscreen_top"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/setting_general" android:key="pref_category_general">
+        <com.google.android.apps.camera.legacy.app.settings.ManagedSwitchPreference android:layout="@layout/preference" android:title="@string/pref_camera_save_location_title" android:key="pref_camera_recordlocation_key" android:order="0" android:defaultValue="false" />
+        <com.google.android.apps.camera.legacy.app.settings.ManagedSwitchPreference android:layout="@layout/preference" android:title="@string/pref_camera_sounds_title" android:key="pref_camera_sounds_key" android:order="1" android:defaultValue="true" />
+        <PreferenceScreen android:layout="@layout/preference" android:title="@string/pref_camera_gestures_title" android:key="pref_category_gestures" android:order="10">
+            <ListPreference android:entries="@array/pref_volume_action_entries" android:layout="@layout/preference" android:title="@string/pref_camera_volume_key_action_title" android:key="pref_volume_key_action" android:summary="%s" android:defaultValue="@string/volume_key_shutter" android:entryValues="@array/pref_volume_action_entryvalues" />
+            <com.google.android.apps.camera.legacy.app.settings.ManagedSwitchPreference android:layout="@layout/preference" android:title="@string/pref_camera_double_tap_zoom_title" android:key="pref_double_tap_zoom_key" android:defaultValue="true" />
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/photo" android:key="pref_category_resolution_camera">
+        <ListPreference android:layout="@layout/preference" android:title="@string/setting_back_camera_photo" android:key="pref_camera_picturesize_back_key" android:summary="%s" android:defaultValue="@string/pref_camera_picturesize_default" android:entryValues="@array/pref_camera_picturesize_entryvalues" />
+        <ListPreference android:layout="@layout/preference" android:title="@string/setting_front_camera_photo" android:key="pref_camera_picturesize_front_key" android:summary="%s" android:defaultValue="@string/pref_camera_picturesize_default" android:entryValues="@array/pref_camera_picturesize_entryvalues" />
+        <PreferenceScreen android:layout="@layout/preference" android:title="@string/pref_burst_settings" android:key="pref_category_smartburst">
+            <com.google.android.apps.camera.legacy.app.settings.ManagedSwitchPreference android:layout="@layout/preference" android:title="@string/pref_burst_title" android:key="pref_smartburst_classicburst" android:summary="@string/pref_smartburst_summary" android:defaultValue="true" />
+            <com.google.android.apps.camera.legacy.app.settings.ManagedSwitchPreference android:layout="@layout/preference" android:title="@string/pref_auto_generate_artifacts_toggle" android:key="pref_auto_generate_artifacts" android:defaultValue="true" />
+        </PreferenceScreen>
+        <PreferenceScreen android:layout="@layout/preference" android:title="@string/pref_category_advanced" android:key="pref_category_advanced">
+            <PreferenceCategory android:title="@string/setting_general" android:key="pref_category_general">
+                <com.google.android.apps.camera.legacy.app.settings.ManagedSwitchPreference android:layout="@layout/preference" android:title="@string/pref_hdr_plus_control_title" android:key="pref_camera_hdrplus_option_available_key" android:summary="@string/pref_hdr_plus_control_summary" android:defaultValue="true" />
+                <ListPreference android:entries="@array/pref_jpeg_quality_entries" android:layout="@layout/preference" android:title="@string/pref_jpeg_quality_title" android:key="pref_jpeg_quality_key" android:summary="%s" android:defaultValue="@string/pref_jpeg_quality_default" android:entryValues="@array/pref_jpeg_quality_entryvalues" />
+                <ListPreference android:entries="@array/pref_model_entries" android:layout="@layout/preference" android:title="@string/pref_model_title" android:key="pref_model_key" android:summary="%s" android:defaultValue="@string/pref_model_default" android:entryValues="@array/pref_model_entryvalues" />
+                <com.google.android.apps.camera.legacy.app.settings.ManagedSwitchPreference android:layout="@layout/preference" android:title="@string/pref_disable_zsl_title" android:key="pref_disable_zsl_key" android:summary="@string/pref_disable_zsl_summary" android:defaultValue="false" />
+                <com.google.android.apps.camera.legacy.app.settings.ManagedSwitchPreference android:layout="@layout/preference" android:title="@string/pref_portrait_zoom_title" android:key="pref_portrait_zoom_key" android:summary="@string/pref_portrait_zoom_summary" android:defaultValue="false" />
+            </PreferenceCategory>
+            <PreferenceCategory android:title="@string/hdr_enhanced_desc" android:key="pref_category_general">
+                <com.google.android.apps.camera.legacy.app.settings.ManagedSwitchPreference android:layout="@layout/preference" android:title="@string/pref_enable_sblp_title" android:key="pref_enable_sblp_key" android:summary="@string/pref_enable_sblp_summary" android:defaultValue="false" />
+                <com.google.android.apps.camera.legacy.app.settings.ManagedSwitchPreference android:layout="@layout/preference" android:title="@string/pref_portrait_hdrenh_title" android:key="pref_portrait_hdrenh_key" android:summary="@string/pref_portrait_hdrenh_summary" android:defaultValue="false" />
+                <com.google.android.apps.camera.legacy.app.settings.ManagedSwitchPreference android:layout="@layout/preference" android:title="@string/pref_aemode_title" android:key="pref_aemode_key" android:summary="@string/pref_aemode_summary" android:defaultValue="false" />
+                <ListPreference android:entries="@array/pref_aemodespeed_entries" android:layout="@layout/preference" android:title="@string/pref_aemodespeed_title" android:key="pref_aemodespeed_key" android:summary="%s" android:defaultValue="@string/pref_aemodespeed_default" android:entryValues="@array/pref_aemodespeed_entryvalues" />
+                <ListPreference android:entries="@array/pref_parameters_camera2_entries" android:layout="@layout/preference" android:title="@string/pref_parameters_camera2_title" android:key="pref_parameters_camera2_key" android:summary="%s" android:defaultValue="@string/pref_parameters_camera2_default" android:entryValues="@array/pref_parameters_camera2_entryvalues" />
+            </PreferenceCategory>
+        </PreferenceScreen>
+        <PreferenceScreen android:layout="@layout/preference" android:title="@string/pref_experimental" android:key="pref_category_experimental">
+            <com.google.android.apps.camera.legacy.app.settings.ManagedSwitchPreference android:layout="@layout/preference" android:title="@string/pref_gcam_hdr_raw_title" android:key="pref_camera_hdr_plus_raw_out_key" android:summary="@string/pref_gcam_hdr_raw_summary" android:defaultValue="false" />
+            <com.google.android.apps.camera.legacy.app.settings.ManagedSwitchPreference android:layout="@layout/preference" android:title="@string/pref_slomo_title" android:key="pref_slomo_key" android:summary="%s" android:defaultValue="false" />
+            <ListPreference android:entries="@array/pref_hexagon_entries" android:layout="@layout/preference" android:title="@string/pref_hexagon_title" android:key="pref_hexagon_key" android:summary="@string/pref_hexagon_summary" android:defaultValue="@string/pref_hexagon_default" android:entryValues="@array/pref_hexagon_entryvalues" />
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/mode_video" android:key="pref_category_resolution_video">
+        <ListPreference android:layout="@layout/preference" android:title="@string/setting_back_camera_video" android:key="pref_video_quality_back_key" android:summary="%s" android:defaultValue="@string/pref_video_quality_large" android:entryValues="@array/pref_video_quality_entryvalues" />
+        <ListPreference android:layout="@layout/preference" android:title="@string/setting_front_camera_video" android:key="pref_video_quality_front_key" android:summary="%s" android:defaultValue="@string/pref_video_quality_large" android:entryValues="@array/pref_video_quality_entryvalues" />
+        <com.google.android.apps.camera.legacy.app.settings.ManagedSwitchPreference android:layout="@layout/preference" android:title="@string/pref_video_stabilization" android:key="pref_video_stabilization_key" android:defaultValue="true" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/setting_google_help_and_feedback" android:key="pref_category_help_and_feedback">
+        <PreferenceScreen android:layout="@layout/preference" android:title="@string/pref_developer_settings" android:key="pref_category_developer" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/pref_category_about" android:key="_pref_category_about">
+        <PreferenceScreen android:layout="@layout/preference" android:title="@string/pref_category_about" android:key="pref_category_about">
+            <PreferenceScreen android:title="Google Camera">
+                <intent android:action="android.intent.action.VIEW" android:data="https://support.google.com/googlecamera/?hl=en-GB#topic=6164365" />
+            </PreferenceScreen>
+            <PreferenceScreen android:title="B-S-G" android:key="pref_bsg_about" android:summary="Main developer working on this port. Most APKs from other devs are based on his work.">
+                <intent android:action="android.intent.action.VIEW" android:data="https://4pda.ru/forum/index.php?showuser=243055" />
+            </PreferenceScreen>
+            <PreferenceScreen android:title="Arnova8G2" android:key="pref_arnova_about" android:summary="He makes B-S-G's work compatible with more phones">
+                <intent android:action="android.intent.action.VIEW" android:data="https://forum.xda-developers.com/member.php?u=4860033" />
+            </PreferenceScreen>
+            <PreferenceScreen android:title="Charles_l" android:key="pref_charles1_about" android:summary="Develop Camera NX mod for all Google devices">
+                <intent android:action="android.intent.action.VIEW" android:data="https://chromloop.com" />
+            </PreferenceScreen>
+            <PreferenceScreen android:title="defcomg" android:key="pref_defcomg_about" android:summary="Develop lib OP3/OP3T/OP5/OP5T for Front HDR+, Manual Focus and Manual ISO">
+                <intent android:action="android.intent.action.VIEW" android:data="https://forum.xda-developers.com/member.php?u=377973" />
+            </PreferenceScreen>
+            <PreferenceScreen android:title="cstark27" android:summary="LG Optimized and Wide Angle Version">
+                <intent android:action="android.intent.action.VIEW" android:data="https://forum.xda-developers.com/member.php?u=2712580" />
+            </PreferenceScreen>
+            <PreferenceScreen android:title="miniuser123" android:summary="Samsung Galaxy S7 and Exynos Optimized Version, Slow Shutter mod">
+                <intent android:action="android.intent.action.VIEW" android:data="https://forum.xda-developers.com/member.php?u=4798833" />
+            </PreferenceScreen>
+            <PreferenceScreen android:title="Other Developers" android:summary="namok, SerJo87, ivanich, scrubber">
+                <intent android:action="android.intent.action.VIEW" android:data="https://www.celsoazevedo.com/files/android/google-camera" />
+            </PreferenceScreen>
+            <PreferenceScreen android:summary="Info and download of the other versions on S4turno's website">
+                <intent android:action="android.intent.action.VIEW" android:data="https://www.celsoazevedo.com/files/android/google-camera" />
+            </PreferenceScreen>
+            <PreferenceScreen android:title="cstark27_GCam_5.1.018_24_v3.8" android:summary="View App Settings Page">
+                <intent android:action="android.settings.APPLICATION_DETAILS_SETTINGS" android:data="package:com.google.android.GoogleCameraCS" />
+            </PreferenceScreen>
+        </PreferenceScreen>
+    </PreferenceCategory>
+</PreferenceScreen>
